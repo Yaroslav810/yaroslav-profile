@@ -1,0 +1,87 @@
+.profile__block {
+    width: 90%;
+    max-width: 1320px;
+    margin: 100px auto;
+    padding: 50px 190px;
+    border-radius: 20px;
+    background: #065592;
+}
+
+.profile__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile__avatar {
+    width: 330px;
+    height: 330px;
+    margin-top: -100px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.profile__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile__name {
+    margin-top: 30px;
+    font: 70px "Russo One", sans-serif;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.delimiter {
+    margin: 15px 0;
+    width: 300px;
+    height: 2px;
+    background: #8BF2FF;
+}
+
+.profile__about {
+    margin-top: 65px;
+    font: 25px "Verdana", sans-serif;
+    color: #FFFFFF;
+}
+
+.profile__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: -1000;
+    background: linear-gradient(#5087BE, #B5B6E1);
+}
+
+@media (max-width: 1250px) {
+    .profile__block {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .profile__block {
+        padding: 15px;
+    }
+
+    .profile__avatar {
+        width: 230px;
+        height: 230px;
+    }
+
+    .profile__name {
+        font-size: 40px;
+    }
+
+    .delimiter {
+        width: 100px;
+    }
+
+    .profile__about {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+}

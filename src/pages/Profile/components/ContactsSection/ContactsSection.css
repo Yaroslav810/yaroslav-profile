@@ -1,0 +1,65 @@
+.contacts {
+    width: 80%;
+    margin-top: 100px;
+}
+
+.contacts__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contacts__list li {
+    list-style-type: none;
+    margin: 10px 5px;
+}
+
+.contacts__link {
+    display: block;
+    height: 140px;
+    width: 90px;
+    color: #065592;
+    background: #8BF2FF;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.contacts__link:hover {
+    margin-top: -10px;
+    height: 150px;
+    background: white;
+}
+
+.link__content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.link__icon {
+    height: 60px;
+}
+
+.link__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.link {
+    font: 15px "Russo One", sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+@media (max-width: 500px) {
+    .contacts {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .contacts__link {
+        width: 100px;
+    }
+}
