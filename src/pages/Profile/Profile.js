@@ -1,32 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Profile.css';
 
 import ContactsSection from "./components/ContactsSection/ContactsSection";
+import Loader from "../../components/Loader/Loader"
 import Footer from "../../components/Footer/Footer"
-import avatarImage from "../../assets/images/yaroslav.jpg";
+import axios from "axios";
 
 function Profile() {
+  const [data, setData] = React.useState(null);
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    axios
+        .get('/api/get_profile/index.php')
+        .then(response => {
+          setData(response.data);
+          console.log(data);
+          setLoading(false);
+        })
+  });
+
+  if (loading) {
+    return (
+        <Loader />
+    )
+  }
   return (
       <div className="profile">
         <div className="profile__block">
           <div className="profile__content">
             <div className="profile__avatar">
-              <img src={ avatarImage } alt="avatar"/>
+              <img src={ data.avatar } alt="avatar"/>
             </div>
             <div className="profile__name">
-              Кузьмин Ярослав
+              { data.name }
             </div>
             <div className="delimiter" />
             <div className="profile__about">
-              Здесь будет что-то написано, Здесь будет что-то написано,
-              Здесь будет что-то написано, Здесь будет что-то написано,
-              Здесь будет что-то написано, Здесь будет что-то написано,
-              Здесь будет что-то написано, Здесь будет что-то написано,
-              Здесь будет что-то написано, Здесь будет что-то написано,
-              Здесь будет что-то написано, Здесь будет что-то написано,
-              Здесь будет что-то написано!
+              { data.text }
             </div>
-            <ContactsSection />
+            <ContactsSection socialNetworks={ data.socialNetworks } />
           </div>
         </div>
         <Footer />

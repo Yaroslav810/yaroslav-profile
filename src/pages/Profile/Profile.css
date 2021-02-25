@@ -59,6 +59,21 @@
     -webkit-filter: blur(2px);
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #707070;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7AF2C9;
+    border-radius: 5px;
+}
+
+
 @media (max-width: 1250px) {
     .profile__block {
         padding: 50px;

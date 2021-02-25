@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ContactsSection.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,45 +13,7 @@ import {
   faYoutube
 } from '@fortawesome/free-brands-svg-icons';
 
-let socialNetworks = [
-  {
-    id: 'vk',
-    title: 'VK',
-    link: 'https://vk.com/yariklend'
-  },
-  {
-    id: 'instagram',
-    title: 'Instagram',
-    link: 'https://www.instagram.com/vso.tip.top/'
-  },
-  {
-    id: 'telegram',
-    title: 'Telegram',
-    link: 'https://t.me/vsotiptop'
-  },
-  {
-    id: 'github',
-    title: 'GitHub',
-    link: 'https://github.com/Yaroslav810'
-  },
-  {
-    id: 'youtube',
-    title: 'YouTube',
-    link: 'https://www.youtube.com/channel/UCuARJ-O5Gvpb8IdxHjXYoQQ'
-  },
-  {
-    id: 'tel',
-    title: 'Телефон',
-    link: 'tel:+79697783077'
-  },
-  {
-    id: 'email',
-    title: 'Почта',
-    link: 'mailto:Yaroslav.Kuzmin.01@yandex.ru'
-  }
-];
-
-function ContactsSection() {
+function ContactsSection(props) {
   const getSocialNetworkIconById = (socialNetworkId) => {
     switch (socialNetworkId) {
       case 'github': return <FontAwesomeIcon icon={ faGithub } size="3x" />;
@@ -67,11 +29,12 @@ function ContactsSection() {
     }
   }
 
+
   return(
       <div className="contacts">
         <ul className="contacts__list">
           {
-            socialNetworks.map((socialNetwork, index) => (
+            props.socialNetworks.map((socialNetwork, index) => (
                 <li key={ index }>
                   <a
                       className="contacts__link link"
