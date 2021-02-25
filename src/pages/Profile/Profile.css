@@ -53,6 +53,9 @@
     position: fixed;
     inset: 0;
     z-index: -1000;
+    background: #5087BE;
+    background: -moz-radial-gradient(#5087BE, #B5B6E1);
+    background: -webkit-radial-gradient(#5087BE, #B5B6E1);
     background: linear-gradient(#5087BE, #B5B6E1);
 }
 
