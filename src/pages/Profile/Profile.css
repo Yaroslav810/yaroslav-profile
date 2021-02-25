@@ -4,7 +4,7 @@
     margin: 100px auto;
     padding: 50px 190px;
     border-radius: 20px;
-    background: #065592;
+    background: rgba(6, 85, 146, .95);
 }
 
 .profile__content {
@@ -46,6 +46,7 @@
 .profile__about {
     margin-top: 65px;
     font: 25px "Verdana", sans-serif;
+    text-align: center;
     color: #FFFFFF;
 }
 
@@ -53,10 +54,9 @@
     position: fixed;
     inset: 0;
     z-index: -1000;
-    background: #5087BE;
-    background: -moz-linear-gradient(#5087BE, #B5B6E1);
-    background: -webkit-linear-gradient(#5087BE, #B5B6E1);
-    background: linear-gradient(#5087BE, #B5B6E1);
+    background: url("https://c.wallhere.com/photos/a3/43/mountains_high_snow-988481.jpg!d") center center / cover no-repeat fixed;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
 }
 
 @media (max-width: 1250px) {
