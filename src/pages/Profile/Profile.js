@@ -10,15 +10,16 @@ function Profile() {
   const [data, setData] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
 
-  React.useEffect(() => {
+  useEffect(() => {
     axios
         .get('/api/get_profile/index.php')
         .then(response => {
-          setData(response.data);
-          console.log(data);
+          const profileData = response.data;
+          setData(profileData);
+          console.log(profileData);
           setLoading(false);
         })
-  });
+  }, [setData]);
 
   if (loading) {
     return (
