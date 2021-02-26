@@ -105,4 +105,8 @@
         margin-top: 10px;
         font-size: 18px;
     }
+
+    .profile__overlay {
+        background-attachment: initial;
+    }
 }
