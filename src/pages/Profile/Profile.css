@@ -1,3 +1,9 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    background: fixed url("https://c.wallhere.com/photos/a3/43/mountains_high_snow-988481.jpg!d") center/cover no-repeat;
+}
+
 .profile__block {
     width: 90%;
     max-width: 1320px;
@@ -48,24 +54,6 @@
     font: 25px "Verdana", sans-serif;
     text-align: center;
     color: #FFFFFF;
-}
-
-.profile__overlay {
-    position: relative;
-}
-
-.profile__overlay img {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-    height: 100%;
-    width: 100%;
 }
 
 ::-webkit-scrollbar {

@@ -71,9 +71,6 @@ function Profile() {
           </div>
         </div>
         <Footer />
-        <div className="profile__overlay">
-          <img src="https://c.wallhere.com/photos/a3/43/mountains_high_snow-988481.jpg!d" alt=""/>
-        </div>
       </div>
   );
 }
