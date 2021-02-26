@@ -49,6 +49,13 @@
     background: #8BF2FF;
 }
 
+.profile__text {
+    margin-top: 65px;
+    font: 25px "Verdana", sans-serif;
+    text-align: center;
+    color: #FFFFFF;
+}
+
 .profile__about {
     margin-top: 65px;
     font: 25px "Verdana", sans-serif;
