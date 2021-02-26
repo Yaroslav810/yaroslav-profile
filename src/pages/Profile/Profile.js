@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Profile.css';
 
 import ContactsSection from "./components/ContactsSection/ContactsSection";
+import Loading from "../../components/Loading/Loading";
 import Footer from "../../components/Footer/Footer"
 
 let response = {
@@ -53,12 +54,21 @@ let response = {
 };
 
 function Profile() {
+  const [loading, setLoading] = useState(true);
+
+  window.onload = () => {
+    setLoading(false);
+  };
+
+  if (loading) {
+    return <Loading />
+  }
   return (
       <div className="profile">
         <div className="profile__block">
           <div className="profile__content">
             <div className="profile__avatar">
-              <img src={ response.avatar } alt="avatar"/>
+              <img src={ response.avatar } alt="avatar" />
             </div>
             <div className="profile__name">
               { response.name }
