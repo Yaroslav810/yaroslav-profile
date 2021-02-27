@@ -117,6 +117,10 @@
     .profile__block {
         padding: 50px;
     }
+
+    .left-scroll-bar, .left-scroll-bar_active {
+        display: none;
+    }
 }
 
 @media (max-width: 500px) {
