@@ -1,6 +1,7 @@
 .profile {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     background: fixed url('https://sun9-41.userapi.com/impg/U5LJ8KrJNUWKVrhxCUGwMVl58u0MDAW5uEJGOw/tIV2dyVlBLA.jpg?size=1600x1067&quality=96&sign=278840b21ddb939958c5155d62860eee&type=album') center/cover no-repeat;
 }
 
@@ -151,7 +152,7 @@
     }
 
     .profile__text, .profile__about {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     .profile__text {
