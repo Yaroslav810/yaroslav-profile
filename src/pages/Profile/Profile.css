@@ -64,6 +64,41 @@
     color: #FFFFFF;
 }
 
+.left-scroll-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 90px;
+    visibility: hidden;
+    opacity: 0;
+    transition: background-color .2s linear;
+}
+
+.left-scroll-bar_active {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(224, 255, 255, .1);
+    cursor: pointer;
+}
+
+.left-scroll-bar_active:before {
+    content: '';
+    border: 10px solid transparent;
+    border-bottom: 10px solid rgba(122, 242, 201, .1);
+    position: absolute;
+    left: 35px;
+    top: 50%;
+}
+
+.left-scroll-bar:hover {
+    background-color: rgba(139, 242, 255, .3);
+}
+
+.left-scroll-bar:hover:before {
+    border-bottom-color: rgba(139, 242, 255, .6);
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }

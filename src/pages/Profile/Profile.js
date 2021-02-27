@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { animateScroll } from "react-scroll";
 import './Profile.css';
 
 import ContactsSection from "./components/ContactsSection/ContactsSection";
@@ -55,10 +56,24 @@ let response = {
 
 function Profile() {
   const [loading, setLoading] = useState(true);
+  const [scroll, setScroll] = useState(0);
 
   window.onload = () => {
     setLoading(false);
   };
+
+  const scrollToTop = () => {
+    animateScroll.scrollToTop();
+  }
+
+  const handleScroll = () => {
+    setScroll(window.scrollY);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   if (loading) {
     return <Loading />
@@ -79,6 +94,7 @@ function Profile() {
             <ContactsSection socialNetworks={ response.socialNetworks } />
           </div>
         </div>
+        <div className={ "left-scroll-bar " + (scroll < 300 ? "" : "left-scroll-bar_active") } onClick={ scrollToTop } />
         <Footer />
       </div>
   );
