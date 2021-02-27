@@ -91,11 +91,11 @@
     top: 50%;
 }
 
-.left-scroll-bar:hover {
+.left-scroll-bar_active:hover {
     background-color: rgba(139, 242, 255, .3);
 }
 
-.left-scroll-bar:hover:before {
+.left-scroll-bar_active:hover:before {
     border-bottom-color: rgba(139, 242, 255, .6);
 }
 
@@ -112,13 +112,22 @@
     border-radius: 10px;
 }
 
+@media (max-width: 1510px) {
+    .left-scroll-bar {
+        width: 50px;
+    }
+
+    .left-scroll-bar_active:before {
+        display: none;
+    }
+}
 
 @media (max-width: 1250px) {
     .profile__block {
         padding: 50px;
     }
 
-    .left-scroll-bar, .left-scroll-bar_active {
+    .left-scroll-bar {
         display: none;
     }
 }
