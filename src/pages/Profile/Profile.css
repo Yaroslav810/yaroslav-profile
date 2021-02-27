@@ -150,9 +150,16 @@
         width: 100px;
     }
 
-    .profile__about {
-        margin-top: 10px;
+    .profile__text, .profile__about {
         font-size: 18px;
+    }
+
+    .profile__text {
+        margin-top: 20px;
+    }
+
+    .profile__about {
+        margin-top: 30px;
     }
 
     .profile__overlay {
