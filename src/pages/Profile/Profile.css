@@ -135,6 +135,7 @@
 
 @media (max-width: 500px) {
     .profile__block {
+        margin: 100px auto 25px auto;
         padding: 15px;
     }
 
