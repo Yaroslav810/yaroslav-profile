@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { animateScroll } from "react-scroll";
 import './Profile.css';
+import avatar from "../../assets/images/yaroslav.jpg";
 
 import ContactsSection from "./components/ContactsSection/ContactsSection";
 import Loading from "../../components/Loading/Loading";
@@ -83,7 +84,7 @@ function Profile() {
         <div className="profile__block">
           <div className="profile__content">
             <div className="profile__avatar">
-              <img src={ response.avatar } alt="avatar" />
+              <img src={ avatar } alt="avatar" />
             </div>
             <div className="profile__name">
               { response.name }
