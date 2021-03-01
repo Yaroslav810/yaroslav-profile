@@ -5,6 +5,7 @@ import avatar from "../../assets/images/yaroslav.jpg";
 
 import ContactsSection from "./components/ContactsSection/ContactsSection";
 import Loading from "../../components/Loading/Loading";
+import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer"
 
 let response = {
@@ -20,17 +21,17 @@ let response = {
     {
       id: 'vk',
       title: 'VK',
-      link: 'https://vk.com/yariklend'
+      link: 'https://vk.com/yaroslav.production'
     },
     {
       id: 'instagram',
       title: 'Instagram',
-      link: 'https://www.instagram.com/vso.tip.top/'
+      link: 'https://www.instagram.com/yaroslav.production/'
     },
     {
       id: 'telegram',
       title: 'Telegram',
-      link: 'https://t.me/vsotiptop'
+      link: 'https://t.me/yaroslav_prod'
     },
     {
       id: 'github',
@@ -43,14 +44,9 @@ let response = {
       link: 'https://www.youtube.com/channel/UCuARJ-O5Gvpb8IdxHjXYoQQ'
     },
     {
-      id: 'tel',
-      title: 'Телефон',
-      link: 'tel:+79697783077'
-    },
-    {
       id: 'email',
       title: 'Почта',
-      link: 'mailto:Yaroslav.Kuzmin.01@yandex.ru'
+      link: 'mailto:info@yaroslavprod.ml'
     }
   ]
 };
@@ -81,6 +77,7 @@ function Profile() {
   }
   return (
       <div className="profile">
+        <Header />
         <div className="profile__block">
           <div className="profile__content">
             <div className="profile__avatar">
