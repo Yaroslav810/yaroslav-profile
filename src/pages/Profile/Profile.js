@@ -77,7 +77,6 @@ function Profile() {
   }
   return (
       <div className="profile">
-        <Header />
         <div className="profile__block">
           <div className="profile__content">
             <div className="profile__avatar">
