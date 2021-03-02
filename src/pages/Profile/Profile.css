@@ -7,11 +7,11 @@
 
 .profile__block {
     width: 90%;
-    max-width: 1320px;
-    margin: 150px auto 50px auto;
+    max-width: 1820px;
+    margin: 100px auto 50px auto;
     padding: 50px 190px;
     border-radius: 20px;
-    background: rgba(6, 85, 146, .7);
+    background: rgba(6, 85, 146, .95);
 }
 
 .profile__content {
