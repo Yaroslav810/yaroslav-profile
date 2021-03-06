@@ -7,12 +7,15 @@ import {
 } from 'react-router-dom';
 
 import Profile from './pages/Profile/Profile';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
       <Router>
         <Switch>
-          <Route render={ () => <Profile /> } />
+          <Route exact path="/" render={ () => <Profile /> } />
+
+          <Route render={ () => <NotFound /> } />
         </Switch>
       </Router>
   );

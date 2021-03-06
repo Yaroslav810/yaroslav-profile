@@ -1,0 +1,21 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #1A1B23;
+}
+
+.not-found__text {
+    color: #FF3636;
+}
+
+.not-found__link a {
+    color: #05B100;
+    border-bottom: 1px solid #05B100;
+}
+
+.not-found__text, .not-found__link {
+    margin-top: 100px;
+    font: 25px "Gilroy", "Verdana", sans-serif;
+    text-align: center;
+}

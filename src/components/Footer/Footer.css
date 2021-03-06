@@ -1,9 +1,10 @@
 .footer {
+    margin-top: 20px;
     padding: 5px;
     text-align: center;
 }
 
 .footer__text {
-    font: 14px "Verdana", sans-serif;
+    font: 14px "Gilroy", "Verdana", sans-serif;
     color: #FFFFFF;
 }
