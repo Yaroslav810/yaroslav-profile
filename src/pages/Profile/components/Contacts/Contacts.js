@@ -1,28 +1,30 @@
-import React from 'react';
-import './Contacts.css';
+import React from 'react'
+import './Contacts.css'
+import {socialNetworks} from '../../../../const/socialNetworks'
 
-function Contacts(props) {
+function Contacts() {
 
-  return(
-      <div className="contacts">
-        <ul className="contacts__list list">
-          {
-            props.socialNetworks.map((socialNetwork, index) => (
-                <li key={ index }>
-                  <a
-                      className="contacts__link link"
-                      href={ socialNetwork.link }
-                      title={ socialNetwork.title }
-                      target="_blank"
-                  >
-                    { socialNetwork.title }
-                  </a>
-                </li>
-            ))
-          }
-        </ul>
-      </div>
-  );
+    return (
+        <div className="contacts">
+            <ul className="contacts__list list">
+                {
+                    socialNetworks.map((socialNetwork, index) => (
+                        <li key={ index }>
+                            <a
+                                className="contacts__link link"
+                                href={ socialNetwork.link }
+                                title={ socialNetwork.title }
+                                rel="noreferrer"
+                                target="_blank"
+                            >
+                                { socialNetwork.title }
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    )
 }
 
-export default Contacts;
+export default Contacts

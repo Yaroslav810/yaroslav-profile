@@ -1,10 +1,10 @@
-import React from 'react';
-import './Delimiter.css';
+import React from 'react'
+import './Delimiter.css'
 
 function Delimiter() {
-  return (
-      <div className="delimiter" />
-  );
+    return (
+        <div className="delimiter" />
+    )
 }
 
-export default Delimiter;
+export default Delimiter
